@@ -45,7 +45,8 @@
             // 
             this.pcJogador1.Location = new System.Drawing.Point(55, 40);
             this.pcJogador1.Name = "pcJogador1";
-            this.pcJogador1.Size = new System.Drawing.Size(196, 212);
+            this.pcJogador1.Size = new System.Drawing.Size(200, 200);
+            this.pcJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcJogador1.TabIndex = 0;
             this.pcJogador1.TabStop = false;
             // 
@@ -67,7 +68,7 @@
             this.lblPlacar1.Name = "lblPlacar1";
             this.lblPlacar1.Size = new System.Drawing.Size(80, 73);
             this.lblPlacar1.TabIndex = 2;
-            this.lblPlacar1.Text = "label";
+            this.lblPlacar1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblJogador2
             // 
@@ -82,7 +83,8 @@
             // 
             this.pcJogador2.Location = new System.Drawing.Point(532, 38);
             this.pcJogador2.Name = "pcJogador2";
-            this.pcJogador2.Size = new System.Drawing.Size(196, 212);
+            this.pcJogador2.Size = new System.Drawing.Size(200, 200);
+            this.pcJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcJogador2.TabIndex = 3;
             this.pcJogador2.TabStop = false;
             // 
@@ -126,7 +128,7 @@
             this.lblPlacar2.Name = "lblPlacar2";
             this.lblPlacar2.Size = new System.Drawing.Size(79, 73);
             this.lblPlacar2.TabIndex = 9;
-            this.lblPlacar2.Text = "label";
+            this.lblPlacar2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmJogoDados
             // 

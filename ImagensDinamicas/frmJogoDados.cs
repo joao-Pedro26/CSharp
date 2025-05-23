@@ -22,17 +22,34 @@ namespace ImagensDinamicas
             InitializeComponent();
         }
 
-      
+
         private void btnJogar_Click(object sender, EventArgs e)
         {
             dadoJog1 = SorteioDado(pcJogador1);
             dadoJog2 = SorteioDado(pcJogador2);
-        }
+            if (dadoJog1 > dadoJog2)
+            {
+                contVitoria1++;
+                lblPlacar1.Text = contVitoria1.ToString();
+            }
+            else if (dadoJog2 > dadoJog1)
+            {
+                contVitoria2++;
+                lblPlacar2.Text = contVitoria2.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Empate!",
+                                "Jogo de Dados CTI",
+                                 MessageBoxButtons.OK, 
+                                 MessageBoxIcon.Exclamation);
 
+            }
+        }
         private int SorteioDado(PictureBox dado)
         {
             int valorDado = sorteio.Next(1, 7);
-            String arquivoDado = "\'imagens\'dados/dado" + valorDado.ToString() + ".png";
+            String arquivoDado = ".\\imagens\\dado" + valorDado.ToString() + ".jpg";
             dado.Image = Image.FromFile(arquivoDado);
             return valorDado;
 
@@ -41,4 +58,3 @@ namespace ImagensDinamicas
         }
     }
 }
-0
