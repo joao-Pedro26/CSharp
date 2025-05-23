@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pcJogador1 = new System.Windows.Forms.PictureBox();
             this.lblJogador1 = new System.Windows.Forms.Label();
             this.lblPlacar1 = new System.Windows.Forms.Label();
@@ -37,6 +38,7 @@
             this.btnJogar = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblPlacar2 = new System.Windows.Forms.Label();
+            this.timerDado = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pcJogador1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcJogador2)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +99,7 @@
             this.btnReiniciar.TabIndex = 6;
             this.btnReiniciar.Text = "Reiniciar";
             this.btnReiniciar.UseVisualStyleBackColor = true;
+            this.btnReiniciar.Click += new System.EventHandler(this.btnReiniciar_Click);
             // 
             // btnJogar
             // 
@@ -118,6 +121,7 @@
             this.btnSair.TabIndex = 8;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // lblPlacar2
             // 
@@ -129,6 +133,11 @@
             this.lblPlacar2.Size = new System.Drawing.Size(79, 73);
             this.lblPlacar2.TabIndex = 9;
             this.lblPlacar2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // timerDado
+            // 
+            this.timerDado.Interval = 200;
+            this.timerDado.Tick += new System.EventHandler(this.timerDado_Tick);
             // 
             // frmJogoDados
             // 
@@ -146,6 +155,7 @@
             this.Controls.Add(this.pcJogador1);
             this.Name = "frmJogoDados";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.frmJogoDados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcJogador1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcJogador2)).EndInit();
             this.ResumeLayout(false);
@@ -164,5 +174,6 @@
         private System.Windows.Forms.Button btnJogar;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Label lblPlacar2;
+        private System.Windows.Forms.Timer timerDado;
     }
 }

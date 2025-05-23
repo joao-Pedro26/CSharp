@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,17 +17,60 @@ namespace ImagensDinamicas
         private Random sorteio = new Random();
         private int dadoJog1, dadoJog2;
         private int contVitoria1 = 0, contVitoria2 = 0;
-        
+        private int ticksRestantes; 
+
         public frmJogoDados()
         {
             InitializeComponent();
         }
 
+        private void frmJogoDados_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            DialogResult resposta = MessageBox.Show("Deseja sair",
+                                "Jogo de Dados CTI",
+                                 MessageBoxButtons.YesNo,
+                                 MessageBoxIcon.Question);
+            if (resposta == DialogResult.Yes)
+                this.Close();
+        }
+
+        private void btnReiniciar_Click(object sender, EventArgs e)
+        {
+           lblPlacar1.Text = "0";
+           lblPlacar2.Text = "0";
+            
+        }
+
+        private void timerDado_Tick(object sender, EventArgs e)
+        {
+          int valorDado1 = sorteio.Next(1, 7);
+          int valorDado2 = sorteio.Next(1, 7);
+          pcJogador1.Image= Image.FromFile(".\\imagens\\dado" + valorDado1.ToString() + ".jpg");
+          pcJogador2.Image = Image.FromFile(".\\imagens\\dado" + valorDado2.ToString() + ".jpg");
+        }
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
-            dadoJog1 = SorteioDado(pcJogador1);
-            dadoJog2 = SorteioDado(pcJogador2);
+            // Verifica se o timer está ativo
+            if (timerDado.Enabled)
+            {
+                timerDado.Stop();
+                btnJogar.Text = "Jogar";
+                dadoJog1 = SorteioDado(pcJogador1);
+                dadoJog2 = SorteioDado(pcJogador2);
+            }
+            else
+            {
+                timerDado.Start();
+                btnJogar.Text = "Parar";
+            }
+
+          
             if (dadoJog1 > dadoJog2)
             {
                 contVitoria1++;
@@ -56,5 +100,6 @@ namespace ImagensDinamicas
 
 
         }
+
     }
 }
