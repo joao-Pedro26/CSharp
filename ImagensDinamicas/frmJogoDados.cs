@@ -17,7 +17,7 @@ namespace ImagensDinamicas
         private Random sorteio = new Random();
         private int dadoJog1, dadoJog2;
         private int contVitoria1 = 0, contVitoria2 = 0;
-        private int ticksRestantes; 
+        private int ticks = 20; 
 
         public frmJogoDados()
         {
@@ -48,10 +48,36 @@ namespace ImagensDinamicas
 
         private void timerDado_Tick(object sender, EventArgs e)
         {
-          int valorDado1 = sorteio.Next(1, 7);
-          int valorDado2 = sorteio.Next(1, 7);
-          pcJogador1.Image= Image.FromFile(".\\imagens\\dado" + valorDado1.ToString() + ".jpg");
-          pcJogador2.Image = Image.FromFile(".\\imagens\\dado" + valorDado2.ToString() + ".jpg");
+          int dadoJog1 = sorteio.Next(1, 7);
+          int dadoJog2 = sorteio.Next(1, 7);
+          pcJogador1.Image= Image.FromFile(".\\imagens\\dado" + dadoJog1.ToString() + ".jpg");
+          pcJogador2.Image = Image.FromFile(".\\imagens\\dado" + dadoJog2.ToString() + ".jpg");
+
+            ticks--;  
+            if (ticks <= 0)
+            {
+                timerDado.Stop();
+                btnJogar.Text = "Jogar";
+                ticks = 20;
+                if (dadoJog1 > dadoJog2)
+                {
+                    contVitoria1++;
+                    lblPlacar1.Text = contVitoria1.ToString();
+                }
+                else if (dadoJog2 > dadoJog1)
+                {
+                    contVitoria2++;
+                    lblPlacar2.Text = contVitoria2.ToString();
+                }
+                else
+                {
+                    MessageBox.Show("Empate!",
+                                    "Jogo de Dados CTI",
+                                     MessageBoxButtons.OK,
+                                     MessageBoxIcon.Exclamation);
+
+                }
+            }
         }
 
         private void btnJogar_Click(object sender, EventArgs e)
@@ -61,8 +87,6 @@ namespace ImagensDinamicas
             {
                 timerDado.Stop();
                 btnJogar.Text = "Jogar";
-                dadoJog1 = SorteioDado(pcJogador1);
-                dadoJog2 = SorteioDado(pcJogador2);
             }
             else
             {
@@ -71,24 +95,7 @@ namespace ImagensDinamicas
             }
 
           
-            if (dadoJog1 > dadoJog2)
-            {
-                contVitoria1++;
-                lblPlacar1.Text = contVitoria1.ToString();
-            }
-            else if (dadoJog2 > dadoJog1)
-            {
-                contVitoria2++;
-                lblPlacar2.Text = contVitoria2.ToString();
-            }
-            else
-            {
-                MessageBox.Show("Empate!",
-                                "Jogo de Dados CTI",
-                                 MessageBoxButtons.OK, 
-                                 MessageBoxIcon.Exclamation);
-
-            }
+        
         }
         private int SorteioDado(PictureBox dado)
         {
