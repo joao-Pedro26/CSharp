@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ImagensDinamicas
 {
-    public partial class Form1 : Form
+    public partial class frmCarregaFoto : Form
     {
-        public Form1()
+        public frmCarregaFoto()
         {
             InitializeComponent();
         }

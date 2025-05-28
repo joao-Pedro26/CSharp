@@ -1,6 +1,6 @@
 ﻿namespace ImagensDinamicas
 {
-    partial class Form1
+    partial class frmCarregaFoto
     {
         /// <summary>
         /// Required designer variable.
