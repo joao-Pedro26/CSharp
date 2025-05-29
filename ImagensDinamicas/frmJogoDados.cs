@@ -17,16 +17,23 @@ namespace ImagensDinamicas
         private Random sorteio = new Random();
         private int dadoJog1, dadoJog2;
         private int contVitoria1 = 0, contVitoria2 = 0;
-        private int ticks = 20; 
-
-        public frmJogoDados()
+        private int ticks = 20;
+        private string nomeJogador1;
+        private string nomeJogador2;
+        public frmJogoDados(string nomeJogador1, string nomeJogador2)
         {
             InitializeComponent();
+            this.nomeJogador1 = nomeJogador1;
+            this.nomeJogador2 = nomeJogador2;
+            pcJogador1.Image = Image.FromFile(".\\imagens\\dado1.jpg");
+            pcJogador2.Image = Image.FromFile(".\\imagens\\dado1.jpg");
+
         }
 
         private void frmJogoDados_Load(object sender, EventArgs e)
         {
-
+            lblJogador1.Text = nomeJogador1;
+            lblJogador2.Text = nomeJogador2;
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -82,7 +89,6 @@ namespace ImagensDinamicas
 
         private void btnJogar_Click(object sender, EventArgs e)
         {
-            // Verifica se o timer está ativo
             if (timerDado.Enabled)
             {
                 timerDado.Stop();
@@ -93,9 +99,6 @@ namespace ImagensDinamicas
                 timerDado.Start();
                 btnJogar.Text = "Parar";
             }
-
-          
-        
         }
         private int SorteioDado(PictureBox dado)
         {
@@ -103,9 +106,6 @@ namespace ImagensDinamicas
             String arquivoDado = ".\\imagens\\dado" + valorDado.ToString() + ".jpg";
             dado.Image = Image.FromFile(arquivoDado);
             return valorDado;
-
-
-
         }
 
     }

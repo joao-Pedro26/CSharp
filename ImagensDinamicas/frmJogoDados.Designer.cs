@@ -45,9 +45,10 @@
             // 
             // pcJogador1
             // 
-            this.pcJogador1.Location = new System.Drawing.Point(55, 40);
+            this.pcJogador1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pcJogador1.Location = new System.Drawing.Point(64, 48);
             this.pcJogador1.Name = "pcJogador1";
-            this.pcJogador1.Size = new System.Drawing.Size(200, 200);
+            this.pcJogador1.Size = new System.Drawing.Size(180, 180);
             this.pcJogador1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcJogador1.TabIndex = 0;
             this.pcJogador1.TabStop = false;
@@ -55,18 +56,19 @@
             // lblJogador1
             // 
             this.lblJogador1.AutoSize = true;
+            this.lblJogador1.Font = new System.Drawing.Font("Playbill", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJogador1.Location = new System.Drawing.Point(129, 9);
             this.lblJogador1.Name = "lblJogador1";
-            this.lblJogador1.Size = new System.Drawing.Size(54, 13);
+            this.lblJogador1.Size = new System.Drawing.Size(59, 21);
             this.lblJogador1.TabIndex = 1;
             this.lblJogador1.Text = "Jogador 1";
             // 
             // lblPlacar1
             // 
-            this.lblPlacar1.BackColor = System.Drawing.Color.Yellow;
-            this.lblPlacar1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPlacar1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPlacar1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPlacar1.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlacar1.Location = new System.Drawing.Point(103, 259);
+            this.lblPlacar1.Location = new System.Drawing.Point(108, 259);
             this.lblPlacar1.Name = "lblPlacar1";
             this.lblPlacar1.Size = new System.Drawing.Size(80, 73);
             this.lblPlacar1.TabIndex = 2;
@@ -75,17 +77,19 @@
             // lblJogador2
             // 
             this.lblJogador2.AutoSize = true;
+            this.lblJogador2.Font = new System.Drawing.Font("Playbill", 15.75F);
             this.lblJogador2.Location = new System.Drawing.Point(606, 9);
             this.lblJogador2.Name = "lblJogador2";
-            this.lblJogador2.Size = new System.Drawing.Size(54, 13);
+            this.lblJogador2.Size = new System.Drawing.Size(59, 21);
             this.lblJogador2.TabIndex = 4;
             this.lblJogador2.Text = "Jogador 2";
             // 
             // pcJogador2
             // 
-            this.pcJogador2.Location = new System.Drawing.Point(532, 38);
+            this.pcJogador2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pcJogador2.Location = new System.Drawing.Point(544, 48);
             this.pcJogador2.Name = "pcJogador2";
-            this.pcJogador2.Size = new System.Drawing.Size(200, 200);
+            this.pcJogador2.Size = new System.Drawing.Size(180, 180);
             this.pcJogador2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcJogador2.TabIndex = 3;
             this.pcJogador2.TabStop = false;
@@ -103,13 +107,15 @@
             // 
             // btnJogar
             // 
+            this.btnJogar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnJogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnJogar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnJogar.Location = new System.Drawing.Point(326, 368);
             this.btnJogar.Name = "btnJogar";
             this.btnJogar.Size = new System.Drawing.Size(144, 58);
             this.btnJogar.TabIndex = 7;
             this.btnJogar.Text = "Jogar";
-            this.btnJogar.UseVisualStyleBackColor = true;
+            this.btnJogar.UseVisualStyleBackColor = false;
             this.btnJogar.Click += new System.EventHandler(this.btnJogar_Click);
             // 
             // btnSair
@@ -125,8 +131,8 @@
             // 
             // lblPlacar2
             // 
-            this.lblPlacar2.BackColor = System.Drawing.Color.Yellow;
-            this.lblPlacar2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblPlacar2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPlacar2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.lblPlacar2.Font = new System.Drawing.Font("Microsoft PhagsPa", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlacar2.Location = new System.Drawing.Point(594, 259);
             this.lblPlacar2.Name = "lblPlacar2";
