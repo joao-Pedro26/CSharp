@@ -160,7 +160,7 @@
             this.Controls.Add(this.lblJogador1);
             this.Controls.Add(this.pcJogador1);
             this.Name = "frmJogoDados";
-            this.Text = "Form2";
+            this.Text = "Jogo de Dados";
             this.Load += new System.EventHandler(this.frmJogoDados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcJogador1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcJogador2)).EndInit();
