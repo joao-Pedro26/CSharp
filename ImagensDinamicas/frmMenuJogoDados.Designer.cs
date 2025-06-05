@@ -40,16 +40,16 @@
             // 
             this.lblNomeJog1.AutoSize = true;
             this.lblNomeJog1.Cursor = System.Windows.Forms.Cursors.No;
-            this.lblNomeJog1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNomeJog1.Location = new System.Drawing.Point(44, 240);
+            this.lblNomeJog1.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomeJog1.Location = new System.Drawing.Point(62, 243);
             this.lblNomeJog1.Name = "lblNomeJog1";
-            this.lblNomeJog1.Size = new System.Drawing.Size(173, 23);
+            this.lblNomeJog1.Size = new System.Drawing.Size(149, 20);
             this.lblNomeJog1.TabIndex = 0;
             this.lblNomeJog1.Text = "Nome Jogador 1:";
             // 
             // txtNomeJog1
             // 
-            this.txtNomeJog1.Location = new System.Drawing.Point(48, 266);
+            this.txtNomeJog1.Location = new System.Drawing.Point(66, 269);
             this.txtNomeJog1.Name = "txtNomeJog1";
             this.txtNomeJog1.Size = new System.Drawing.Size(160, 20);
             this.txtNomeJog1.TabIndex = 2;
@@ -57,7 +57,7 @@
             // 
             // txtNomeJog2
             // 
-            this.txtNomeJog2.Location = new System.Drawing.Point(346, 266);
+            this.txtNomeJog2.Location = new System.Drawing.Point(66, 202);
             this.txtNomeJog2.Name = "txtNomeJog2";
             this.txtNomeJog2.Size = new System.Drawing.Size(160, 20);
             this.txtNomeJog2.TabIndex = 4;
@@ -67,32 +67,34 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Cursor = System.Windows.Forms.Cursors.No;
-            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(342, 240);
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(62, 176);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(174, 23);
+            this.label1.Size = new System.Drawing.Size(149, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nome Jogador 2:";
             // 
             // btFrmDados
             // 
             this.btFrmDados.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFrmDados.Location = new System.Drawing.Point(75, 85);
+            this.btFrmDados.Location = new System.Drawing.Point(66, 12);
             this.btFrmDados.Name = "btFrmDados";
-            this.btFrmDados.Size = new System.Drawing.Size(111, 96);
+            this.btFrmDados.Size = new System.Drawing.Size(170, 140);
             this.btFrmDados.TabIndex = 5;
             this.btFrmDados.Text = "Dados";
+            this.btFrmDados.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btFrmDados.UseVisualStyleBackColor = true;
             this.btFrmDados.Click += new System.EventHandler(this.btFrmDados_Click);
             // 
             // btFrmFotos
             // 
             this.btFrmFotos.Font = new System.Drawing.Font("Showcard Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btFrmFotos.Location = new System.Drawing.Point(371, 85);
+            this.btFrmFotos.Location = new System.Drawing.Point(356, 41);
             this.btFrmFotos.Name = "btFrmFotos";
-            this.btFrmFotos.Size = new System.Drawing.Size(111, 96);
+            this.btFrmFotos.Size = new System.Drawing.Size(160, 133);
             this.btFrmFotos.TabIndex = 6;
             this.btFrmFotos.Text = "Fotos";
+            this.btFrmFotos.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btFrmFotos.UseVisualStyleBackColor = true;
             this.btFrmFotos.Click += new System.EventHandler(this.btFrmFotos_Click);
             // 
