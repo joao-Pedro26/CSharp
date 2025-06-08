@@ -16,7 +16,7 @@ namespace ImagensDinamicas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenuJogoDados());
+            Application.Run(new frmCarregaFoto());
         }
     }
 }

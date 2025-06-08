@@ -17,7 +17,7 @@ namespace ImagensDinamicas
             InitializeComponent();
         }
 
-        private void btnCarregarFoto_Click(object sender, EventArgs e)
+        private void btnCarregarFoto1_Click(object sender, EventArgs e)
         {
             opdFoto.Filter = "JPEG(*.jpg)|*.jpg|PNG(*.png)|*.png|BMP(*.bmp)|*.bmp";
             if (opdFoto.ShowDialog() == DialogResult.OK)
@@ -29,6 +29,27 @@ namespace ImagensDinamicas
                 pictureBox1.Image = null;
             }
 
+        }
+
+        private void btnCarregaFoto2_Click(object sender, EventArgs e)
+        {
+            opdFoto.Filter = "JPEG(*.jpg)|*.jpg|PNG(*.png)|*.png|BMP(*.bmp)|*.bmp";
+            if (opdFoto.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox2.Image = Image.FromFile(opdFoto.FileName);
+            }
+            else
+            {
+                pictureBox2.Image = null;
+            }
+        }
+
+        private void btnJogar_Click(object sender, EventArgs e)
+        {
+            frmJogoDados jogo = new frmJogoDados(txtNomeJog1.Text, txtNomeJog2.Text, pictureBox1.Image,pictureBox2.Image);
+            this.Hide();
+            jogo.ShowDialog();
+            this.Show();
         }
     }
 }

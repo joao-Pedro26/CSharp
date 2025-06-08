@@ -20,7 +20,7 @@ namespace ImagensDinamicas
         private int ticks = 20;
         private string nomeJogador1;
         private string nomeJogador2;
-        public frmJogoDados(string nomeJogador1, string nomeJogador2)
+        public frmJogoDados(string nomeJogador1, string nomeJogador2, Image jog1, Image jog2)
         {
             InitializeComponent();
             this.nomeJogador1 = nomeJogador1;

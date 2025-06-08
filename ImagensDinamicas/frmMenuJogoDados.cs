@@ -15,18 +15,14 @@ namespace ImagensDinamicas
         public frmMenuJogoDados()
         {
             InitializeComponent();
-            Image imagemDado = new Bitmap(new Bitmap(".\\imagens\\dado5.jpg"), btFrmDados.Width - 20, btFrmDados.Height - 5);
-            btFrmDados.Image = imagemDado;
+         
             Image imagemFoto = new Bitmap(new Bitmap(".\\imagens\\foto.jpg"), btFrmFotos.Width - 20, btFrmFotos.Height - 5);
             btFrmFotos.Image = imagemFoto;
         }
 
         private void btFrmDados_Click(object sender, EventArgs e)
         {
-            frmJogoDados jogo = new frmJogoDados(txtNomeJog1.Text, txtNomeJog2.Text);
-            this.Hide();
-            jogo.ShowDialog();
-            this.Show();
+           
         }
 
         private void btFrmFotos_Click(object sender, EventArgs e)
